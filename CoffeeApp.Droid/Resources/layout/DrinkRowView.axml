@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:padding="8dp">
+    <LinearLayout
+        android:id="@+id/drinkRow"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewProductName"
+            android:text="Lorem Ipsum"
+            android:textColor="#FFFFFFFF"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="160.0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/buttonPlus"
+            android:text="+"
+            android:layout_width="40.0dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginLeft="0.0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/buttonMin"
+            android:text="-"
+            android:layout_width="40.0dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginLeft="0.0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textViewProductCount"
+            android:text="0"
+            android:textColor="#FFFFFFFF"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:paddingLeft="10.0dp"
+            android:layout_width="40.0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

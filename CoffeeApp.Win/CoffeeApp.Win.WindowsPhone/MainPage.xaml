@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="CoffeeApp.Win.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CoffeeApp.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+   <Grid>
+        <StackPanel>
+            <TextBlock Text="CoffeeApp" FontSize="48" />
+            <ListView x:Name="drinkListView" ItemsSource="{Binding}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Path=Name}" FontSize="20" Padding="10" Width="130"/>
+                            <Button x:Name="increaseButton" Width="10" Height="10" Click="IncreaseButton_Click" >+</Button>
+                            <Button x:Name="decreaseButton" Click="DecreaseButton_Click">-</Button>
+                            <TextBlock x:Name="countText" Text="{Binding Path=Count, Mode=OneWay}" FontSize="20" Padding="10" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </Grid>    </Grid>
+</Page>

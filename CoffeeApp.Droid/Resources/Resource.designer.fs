@@ -23,10 +23,10 @@ namespace CoffeeApp_Droid
     #nowarn "51" // address-of operator can occur in the code
     #nowarn "1183" // unused 'this' reference
     
-    exception ReturnException2cee025bda0341fa93e55ea14a11c43c of obj
-    exception ReturnNoneException2cee025bda0341fa93e55ea14a11c43c
+    exception ReturnException95a0dc7e95c7440885f739cf5f8c09fc of obj
+    exception ReturnNoneException95a0dc7e95c7440885f739cf5f8c09fc
     [<AutoOpen>]
-    module FuncConvertFinalOverload2cee025bda0341fa93e55ea14a11c43c =
+    module FuncConvertFinalOverload95a0dc7e95c7440885f739cf5f8c09fc =
       // This extension member adds to the FuncConvert type and is the last resort member in the method overloading rules. 
       type global.Microsoft.FSharp.Core.FuncConvert with
           /// A utility function to convert function values from tupled to curried form

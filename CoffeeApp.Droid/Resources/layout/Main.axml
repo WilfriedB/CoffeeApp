@@ -6,11 +6,10 @@
     <ListView
         android:id="@+id/drinkItemListView"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
-    <TextView
-        android:text="Koffie zwart"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="220.0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1ProductName" />
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/resetButton"
+        android:text="Reset"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

@@ -1,6 +1,7 @@
 ﻿namespace CoffeeApp.Core
 
 open System.Collections.Generic
+open System.Linq
 
 type DataService() = 
     let items = new List<DrinkItem>([new DrinkItem("Koffie zwart")
@@ -11,3 +12,6 @@ type DataService() =
                                    )
     member this.DrinkItems =
         items
+    member this.Reset() =
+        for item in items do
+            item.Reset()

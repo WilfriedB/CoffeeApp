@@ -23,10 +23,10 @@ namespace CoffeeApp_Droid
     #nowarn "51" // address-of operator can occur in the code
     #nowarn "1183" // unused 'this' reference
     
-    exception ReturnException95a0dc7e95c7440885f739cf5f8c09fc of obj
-    exception ReturnNoneException95a0dc7e95c7440885f739cf5f8c09fc
+    exception ReturnException50519d09927b4880806c945cf7dfd46e of obj
+    exception ReturnNoneException50519d09927b4880806c945cf7dfd46e
     [<AutoOpen>]
-    module FuncConvertFinalOverload95a0dc7e95c7440885f739cf5f8c09fc =
+    module FuncConvertFinalOverload50519d09927b4880806c945cf7dfd46e =
       // This extension member adds to the FuncConvert type and is the last resort member in the method overloading rules. 
       type global.Microsoft.FSharp.Core.FuncConvert with
           /// A utility function to convert function values from tupled to curried form
@@ -81,7 +81,7 @@ namespace CoffeeApp_Droid
             static member drinkRow = 2131099648
             
             // aapt resource value: 0x7f060006
-            static member textView1ProductName = 2131099654
+            static member resetButton = 2131099654
             
             // aapt resource value: 0x7f060004
             static member textViewProductCount = 2131099652

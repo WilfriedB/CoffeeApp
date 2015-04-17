@@ -24,11 +24,14 @@ namespace CoffeeApp.Win
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        DataService service;
+
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+            service = new DataService();
         }
 
         /// <summary>
@@ -38,37 +41,41 @@ namespace CoffeeApp.Win
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-			// TODO: Prepare page for display here.
+            // TODO: Prepare page for display here.
 
-			// TODO: If your application contains multiple pages, ensure that you are
-			// handling the hardware Back button by registering for the
-			// Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
-			// If you are using the NavigationHelper provided by some templates,
-			// this event is handled for you.
-			var v = new DataService();
-			var ds = v.DrinkItems;
-			var dvs = ds.Select(d => new DrinkItemViewModel(d));
-			drinkListView.DataContext = dvs;
+            // TODO: If your application contains multiple pages, ensure that you are
+            // handling the hardware Back button by registering for the
+            // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
+            // If you are using the NavigationHelper provided by some templates,
+            // this event is handled for you.
+            var drinkItems = service.DrinkItems;
+            var drinkItemViewModels = drinkItems.Select(d => new DrinkItemViewModel(d));
+            //drinkListView.DataContext = drinkItemViewModels;
+            drinkListView.DataContext = drinkItems;
         }
 
-		private void IncreaseButton_Click(object sender, RoutedEventArgs e)
-		{
-			var button = sender as Button;
-			if (button == null) { return; }
-			var drinkItem = button.DataContext as DrinkItemViewModel;
-			if (drinkItem == null) { return; }
-			drinkItem.Increase();
-			var p = button.Parent;
-		}
+        private void IncreaseButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null) { return; }
+            var drinkItem = button.DataContext as DrinkItem;
+            if (drinkItem == null) { return; }
+            drinkItem.Increase();
+            var p = button.Parent;
+        }
 
-		private void DecreaseButton_Click(object sender, RoutedEventArgs e)
-		{
-			var button = sender as Button;
-			if (button == null) { return; }
-			var drinkItem = button.DataContext as DrinkItemViewModel;
-			if (drinkItem == null) { return; }
-			drinkItem.Decrease();
-		}
+        private void DecreaseButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null) { return; }
+            var drinkItem = button.DataContext as DrinkItem;
+            if (drinkItem == null) { return; }
+            drinkItem.Decrease();
+        }
 
-	}
+        private void resetButton_Click(object sender, RoutedEventArgs e)
+        {
+            service.Reset();
+        }
+    }
 }

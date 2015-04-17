@@ -21,3 +21,8 @@ type MainActivity() =
         let service = new DataService()
         let items = service.DrinkItems
         listView.Adapter <- new DrinkItemAdapter(this, items)
+        let resetButton = this.FindViewById<Button>(Resource_Id.resetButton)
+        resetButton.Click.Add(fun arg ->
+            service.Reset()
+            listView.Adapter <- new DrinkItemAdapter(this, items)
+        )

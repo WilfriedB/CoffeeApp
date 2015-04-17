@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.fs" />
     <Compile Include="Properties\AssemblyInfo.fs" />
+    <Compile Include="library.fs" />
     <Compile Include="DrinkItemAdapter.fs" />
     <Compile Include="MainActivity.fs" />
   </ItemGroup>

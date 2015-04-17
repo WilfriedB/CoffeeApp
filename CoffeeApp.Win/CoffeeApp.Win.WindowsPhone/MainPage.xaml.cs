@@ -13,7 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using CoffeeApp.Core;
-using CoffeeApp.Win.ViewModel;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -49,8 +48,6 @@ namespace CoffeeApp.Win
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
             var drinkItems = service.DrinkItems;
-            var drinkItemViewModels = drinkItems.Select(d => new DrinkItemViewModel(d));
-            //drinkListView.DataContext = drinkItemViewModels;
             drinkListView.DataContext = drinkItems;
         }
 

@@ -19,18 +19,9 @@ type DrinkItemAdapter(context:Activity, items: IList<DrinkItem>) =
         with get() = items.Count
     override this.GetItemId(position) = int64 position
     override this.GetView(position, view, parent) =
-        let view =
-            match view with
-            | null -> context.LayoutInflater.Inflate(Resource_Layout.DrinkRowView, null)
-            | x -> x
         let drinkItem = items.[position]
-        let countText = view.FindViewById<TextView>(Resource_Id.textViewProductCount)
-        view.FindViewById<TextView>(Resource_Id.textViewProductName).Text <- drinkItem.Name
-        countText.Text <- drinkItem.Count.ToString()
-        view.FindViewById<Button>(Resource_Id.buttonPlus).Click.Add(fun e -> 
-            drinkItem.Increase()
-            countText.Text <- drinkItem.Count.ToString() )
-        view.FindViewById<Button>(Resource_Id.buttonMin).Click.Add(fun e -> 
-            drinkItem.Decrease()
-            countText.Text <- drinkItem.Count.ToString() )
-        view
+        let resultView =
+            match view with
+            | null -> library.initView( context.LayoutInflater.Inflate(Resource_Layout.DrinkRowView, null), drinkItem)
+            | x -> x
+        resultView

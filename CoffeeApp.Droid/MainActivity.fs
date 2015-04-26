@@ -10,7 +10,7 @@ open Android.Widget
 
 open CoffeeApp.Core
 
-[<Activity(Label = "CoffeeApp", MainLauncher = true)>]
+[<Activity(Label = "CoffeeApp")>]
 type MainActivity() = 
     inherit Activity()
     override this.OnCreate(bundle) = 

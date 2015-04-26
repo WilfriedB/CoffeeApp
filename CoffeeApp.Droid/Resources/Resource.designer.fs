@@ -23,10 +23,10 @@ namespace CoffeeApp_Droid
     #nowarn "51" // address-of operator can occur in the code
     #nowarn "1183" // unused 'this' reference
     
-    exception ReturnException33cea99447b04053852ac6558d158bda of obj
-    exception ReturnNoneException33cea99447b04053852ac6558d158bda
+    exception ReturnException765b00a05bce4284b6fdde9b9fa11f7c of obj
+    exception ReturnNoneException765b00a05bce4284b6fdde9b9fa11f7c
     [<AutoOpen>]
-    module FuncConvertFinalOverload33cea99447b04053852ac6558d158bda =
+    module FuncConvertFinalOverload765b00a05bce4284b6fdde9b9fa11f7c =
       // This extension member adds to the FuncConvert type and is the last resort member in the method overloading rules. 
       type global.Microsoft.FSharp.Core.FuncConvert with
           /// A utility function to convert function values from tupled to curried form
@@ -59,7 +59,10 @@ namespace CoffeeApp_Droid
             static member Icon = 2130837504
             
             // aapt resource value: 0x7f020001
-            static member monoandroidsplash = 2130837505
+            static member logokoffieapp480 = 2130837505
+            
+            // aapt resource value: 0x7f020002
+            static member monoandroidsplash = 2130837506
             (* Member of type 'CodeTypeConstructor' is not supported by the CodeDOM provider and was omitted *)
 
 
@@ -125,7 +128,10 @@ namespace CoffeeApp_Droid
         
         (* partial *)Resource_Style () =
             static do Android.Runtime.ResourceIdManager.UpdateIdValues()
+            // aapt resource value: 0x7f050001
+            static member Mono_Android_Theme_Splash = 2131034113
+            
             // aapt resource value: 0x7f050000
-            static member Mono_Android_Theme_Splash = 2131034112
+            static member Theme_Splash = 2131034112
             (* Member of type 'CodeTypeConstructor' is not supported by the CodeDOM provider and was omitted *)
 

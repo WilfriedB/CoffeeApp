@@ -44,6 +44,7 @@
     <Compile Include="library.fs" />
     <Compile Include="DrinkItemAdapter.fs" />
     <Compile Include="MainActivity.fs" />
+    <Compile Include="SplashActivity.fs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -54,6 +55,8 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\layout\DrinkRowView.axml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\logokoffieapp480.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\AboutAssets.txt" />

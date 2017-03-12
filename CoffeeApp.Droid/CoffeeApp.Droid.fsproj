@@ -14,8 +14,9 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>CoffeeApp_Droid</AssemblyName>
-    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,26 +41,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.fs" />
+    <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable\logokoffieapp480.png" />
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\DrinkRowView.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidAsset Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
     <Compile Include="Properties\AssemblyInfo.fs" />
     <Compile Include="library.fs" />
     <Compile Include="DrinkItemAdapter.fs" />
     <Compile Include="MainActivity.fs" />
     <Compile Include="SplashActivity.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
-    <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\drawable\Icon.png" />
-    <AndroidResource Include="Resources\layout\DrinkRowView.axml" />
-    <AndroidResource Include="Resources\values\Styles.xml" />
-    <AndroidResource Include="Resources\drawable\logokoffieapp480.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.FSharp.targets" />
   <ItemGroup>
